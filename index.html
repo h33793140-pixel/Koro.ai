@@ -1,0 +1,177 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Koro AI — Free AI Creative Studio</title>
+  <meta name="description" content="Generate images and restyle videos with Koro AI. Always free." />
+  <style>
+    :root{
+      --bg:#0b0f19; --panel:#111729; --muted:#8892a6; --text:#e6e9f2; --brand:#7c5cff; --accent:#b78bff;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif}
+    a{color:var(--text);text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    .nav{position:sticky;top:0;backdrop-filter:blur(8px);background:rgba(11,15,25,.6);border-bottom:1px solid #1c2438;z-index:20}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:700}
+    .logo-dot{height:28px;width:28px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--accent));display:grid;place-items:center;font-size:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid #2a3550;background:#19223a;color:var(--text);font-weight:600}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),#5a3cff)}
+    .hero{padding:56px 0}
+    .grid{display:grid;gap:20px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1.2fr 1fr}}
+    .headline{font-size:40px;line-height:1.1;font-weight:900}
+    .muted{color:var(--muted)}
+    .panel{background:var(--panel);border:1px solid #1c2438;border-radius:20px;overflow:hidden}
+    .pad{padding:20px}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:#1a2440;border:1px solid #2a3550;color:#cfd6ea;font-size:12px}
+    .section{padding:50px 0}
+    .section h2{font-size:28px;margin:0 0 10px}
+    .features{display:grid;gap:16px}
+    @media(min-width:800px){.features{grid-template-columns:repeat(4,1fr)}}
+    .feature{padding:16px}
+    .price{display:grid;gap:16px}
+    @media(min-width:800px){.price{grid-template-columns:repeat(3,1fr)}}
+    .gallery{display:grid;gap:8px;grid-template-columns:repeat(2,1fr)}
+    @media(min-width:800px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .faq details{background:var(--panel);border:1px solid #1c2438;border-radius:14px;padding:14px}
+    .footer{border-top:1px solid #1c2438;padding:30px 0;margin-top:20px;color:#aeb6cf;font-size:13px}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    .tag{font-size:12px;color:#aeb6cf}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="logo"><div class="logo-dot">✨</div>Koro AI <span class="tag">Free</span></div>
+      <div style="display:flex;gap:10px">
+        <a href="#pricing" class="btn">Pricing</a>
+        <a href="#start" class="btn primary">Start Free</a>
+      </div>
+    </div>
+  </nav>  <main>
+    <section class="hero container grid two">
+      <div>
+        <div class="chip">Always free • No watermark</div>
+        <h1 class="headline" style="margin:14px 0 8px">Turn ideas into stunning visuals</h1>
+        <p class="muted">Generate images, restyle videos, and animate art with a simple studio. No signup required for personal use.</p>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="#start">Start Free</a>
+          <a class="btn" href="#demo">See Demo</a>
+        </div>
+        <div class="muted" style="margin-top:12px;font-size:13px">No credit card • Works on phone</div>
+      </div>
+      <div class="panel" style="aspect-ratio:16/9">
+        <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Editor preview" />
+      </div>
+    </section><section id="features" class="section">
+  <div class="container">
+    <div class="chip" style="margin-bottom:10px">What you can do</div>
+    <h2>Create in minutes, not months</h2>
+    <p class="muted">A simple studio that turns prompts and media into polished visuals with export‑ready formats.</p>
+    <div class="features" style="margin-top:14px">
+      <div class="panel feature"><h3>Text → Image</h3><p class="muted">Generate visuals from prompts with Anime, Realistic, Ukiyo‑e styles.</p></div>
+      <div class="panel feature"><h3>Video Stylizer</h3><p class="muted">Transform your clips into cinematic or anime‑style videos.</p></div>
+      <div class="panel feature"><h3>Image → Video</h3><p class="muted">Bring static art to life with motion and parallax.</p></div>
+      <div class="panel feature"><h3>Private by default</h3><p class="muted">Your uploads stay on your device for this demo page.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="demo" class="section">
+  <div class="container grid two">
+    <div>
+      <h2>See it in action</h2>
+      <p class="muted">Drop an image or video, select a style, and generate. (Demo only — replace with your tool later.)</p>
+      <div class="panel pad" style="margin-top:10px">
+        <label for="prompt" style="display:block;margin-bottom:6px">Prompt</label>
+        <input id="prompt" placeholder="e.g., cyber‑punk alley at night" style="width:100%;padding:12px;border-radius:12px;border:1px solid #2a3550;background:#0f1628;color:#e6e9f2" />
+        <button class="btn primary" style="margin-top:10px;width:100%" onclick="alert('This is a static demo. Replace with your own logic.')">Generate</button>
+      </div>
+      <ul class="muted" style="font-size:14px;line-height:1.8">
+        <li>Batch processing for images</li>
+        <li>Style presets + custom intensity</li>
+        <li>Timeline tweaks for video</li>
+      </ul>
+    </div>
+    <div class="panel" style="aspect-ratio:16/9">
+      <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1200&auto=format&fit=crop" alt="Before/after demo" />
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="section" style="background:#0e1426">
+  <div class="container">
+    <div class="chip" style="margin-bottom:10px">Always free</div>
+    <h2>Koro AI is free — no tiers</h2>
+    <div class="price" style="margin-top:14px">
+      <div class="panel pad">
+        <h3 style="margin:0">Free</h3>
+        <div style="font-size:34px;font-weight:800;margin:6px 0">$0</div>
+        <ul class="muted" style="font-size:14px;line-height:1.8">
+          <li>Unlimited generations (fair use)</li>
+          <li>1080p exports</li>
+          <li>No watermark</li>
+          <li>Community support</li>
+        </ul>
+        <a class="btn primary" href="#start" style="margin-top:10px;width:100%;justify-content:center">Start for free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="chip" style="margin-bottom:10px">Made with Koro AI</div>
+    <h2>Community gallery</h2>
+    <div class="gallery" style="margin-top:10px">
+      <div class="panel" style="aspect-ratio:1/1"><img src="https://picsum.photos/seed/ai-1/800/800" alt="Gallery 1"/></div>
+      <div class="panel" style="aspect-ratio:1/1"><img src="https://picsum.photos/seed/ai-2/800/800" alt="Gallery 2"/></div>
+      <div class="panel" style="aspect-ratio:1/1"><img src="https://picsum.photos/seed/ai-3/800/800" alt="Gallery 3"/></div>
+      <div class="panel" style="aspect-ratio:1/1"><img src="https://picsum.photos/seed/ai-4/800/800" alt="Gallery 4"/></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section" style="background:#0e1426">
+  <div class="container">
+    <h2>FAQ</h2>
+    <div class="faq" style="display:grid;gap:10px;margin-top:8px">
+      <details><summary>Can I use this commercially?</summary><p class="muted">Yes—this template is free. Set your own licensing terms for generated content.</p></details>
+      <details><summary>What are credits?</summary><p class="muted">Credits represent generation time/complexity. Define your own policy or keep it unlimited for personal use.</p></details>
+      <details><summary>Will my uploads be private?</summary><p class="muted">This static page doesn’t upload any files. Replace the demo with your own logic if you add a backend.</p></details>
+      <details><summary>Do I need a GPU?</summary><p class="muted">No. This page is static HTML/CSS and runs everywhere.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="start" class="section">
+  <div class="container grid two">
+    <div class="panel pad">
+      <h2>Get started (personal use)</h2>
+      <ol class="muted" style="line-height:1.8">
+        <li>Download this file as <b>index.html</b>.</li>
+        <li>Host it on GitHub Pages or Netlify (free). See steps below.</li>
+        <li>Edit text and images directly on your phone.</li>
+      </ol>
+    </div>
+    <div class="panel pad">
+      <h3 style="margin-top:0">Contact</h3>
+      <p class="muted">Koro AI</p>
+      <p class="muted">Add your social links here.</p>
+    </div>
+  </div>
+</section>
+
+  </main>  <footer class="footer">
+    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <div>© <span id="year"></span> Koro AI. All rights reserved.</div>
+      <a href="#">Privacy</a>
+    </div>
+  </footer>  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script></body>
+</html>
